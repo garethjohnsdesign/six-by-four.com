@@ -1,0 +1,51 @@
+---
+layout: compress
+---
+
+<!DOCTYPE html>
+<html class="no-js" lang="en" dir="ltr">
+
+<!-- Head -->
+{% include head.html %}
+<!-- End Head -->
+
+<body>
+  
+{% if page.layout == "home" %}
+<div class="grid-y align-center loader">
+  <div class="shrink cell">
+    <div class="grid-x grid-padding-x align-center">
+    	<div class="shrink cell" data-aos="fade-up">
+    		<h4>{{site.title}}</h4>
+    	</div>
+    </div>
+  </div>
+</div>
+{% endif %}
+
+<!-- Mobile Navigation -->  
+{% include navigation--mobile.html %}
+<!-- End Mobile Navigation --> 
+
+<div class="wrapper grid-y align-justify {{page.layout | slugify}}">
+<!-- Navigation -->
+{% include navigation.html %}
+<!-- End Navigation -->
+
+<!-- Content -->
+{{content}}
+<!-- End Content -->
+</div>
+
+<!-- Scripts -->
+{% include scripts.html %}
+<!-- End Scripts -->
+
+<!-- Google Analytics -->
+{% if site.analytics %}
+{% include analytics.html %}
+{% endif %}
+<!-- End Google Analytics -->
+</body>
+
+</html>
