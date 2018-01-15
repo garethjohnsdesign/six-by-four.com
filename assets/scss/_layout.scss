@@ -1,0 +1,233 @@
+//  Table of Contents:
+//
+//   1. Mixins
+//   2. Global
+//   3. Typography
+//   4. Buttons
+//   4. Navigation
+//   5. Sections
+//   6. Section One
+//   7. Section Two
+//   8. Section Three
+//   9. Section Four
+//   10. Projects
+//   11. Contact
+//   12. Footer
+
+
+// 1. Mixins
+// ---------
+
+@mixin links ($link, $hover) {
+  a {
+    color: $link;
+    &:hover {
+      color: $hover;   
+    }
+  }
+}
+
+// 2. Global
+// ---------
+
+body {
+  cursor: default;
+  font-kerning: normal;
+}
+
+svg {
+  max-width: 100%;
+}
+
+::selection {
+  background: $primary-color;
+  color: $secondary-color;
+}
+
+:focus {
+  outline: 0;
+}
+
+.black {
+  color: $black;
+    &:hover {
+    color: $medium-gray;   
+  }
+}
+
+.gray {
+  color: $medium-gray;
+    &:hover {
+    color: $black;   
+  }
+}
+
+
+
+// 3. Typography
+// -------------
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+i, cite, em, var, address, dfn {
+  font-style: normal;
+}
+
+
+// 5. Loading
+// ------
+
+.loader {
+  z-index: 3;
+  position: fixed;
+  background: $white;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%; 
+  opacity: 1;
+  transition: $primary-transition;
+  visibility: visible; 
+  &.loaded {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+
+// 6. Navigation
+// ------
+
+.navigation__logo {
+  z-index: 2;
+}
+
+.navigation__job {
+  z-index: 2;
+}
+
+.navigation__job {
+  color: $secondary-color;
+}
+
+.navigation__hamburger {
+  z-index: 2;
+}
+
+.navigation--mobile {
+  z-index: 1;
+  position: fixed;
+  background: $white;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%; 
+  opacity: 0;
+  transition: $primary-transition;
+  visibility: hidden;
+  font-family: $header-font-family;
+  font-size: 1.25rem;
+  &.open {
+    opacity: 1;
+    visibility: visible;
+  }
+  a {
+   padding: 1rem 0rem;
+  }
+}
+
+// 7. Projects
+// ----------
+
+.projects__list a {
+  display: block;
+  width: 100%;
+  position: relative; 
+  color: transparent;
+  &:hover {
+    color: $white;   
+  }
+}
+    
+.projects__list a:hover img {
+  filter: saturate(100%) brightness(70%); 
+}
+    
+.projects__list a img {
+  transition: $primary-transition;
+  padding-bottom: 1rem;
+}
+
+
+// 8. Project
+// ---------
+
+.project__credits {
+  color: $secondary-color;
+}
+
+.project__pagination a {
+  color: $secondary-color;
+  &:hover {
+    color: $black;  
+  }
+}
+
+// 9. Info
+// ---------
+
+.wrapper {
+  min-height: 100vh;
+  padding: 1rem;
+  @include breakpoint(medium) {
+    padding: 1rem;
+  }
+  @include breakpoint(large) {
+    padding: 2rem;
+  }
+}
+
+.cv__title {
+  color: $secondary-color;
+}
+
+.cv__item {
+  border-bottom: 1px solid $secondary-color;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.home__selected {
+  color: $secondary-color;
+}
+
+.item__play {
+  position: absolute;
+  top: 0rem;
+  left: 0rem;
+  width: 100%;
+  height: 100%;
+}
+
+.info h6 {
+  margin-top: 2rem;
+  color: $secondary-color;
+}
+
+
+.navigation__secondary a {
+  color: $secondary-color;
+}
+
+.navigation__secondary__cell {
+  padding-left: 0rem;
+}
+
+.footer a {
+  color: $secondary-color;
+  &:hover {
+    color: $primary-color;   
+  }
+}

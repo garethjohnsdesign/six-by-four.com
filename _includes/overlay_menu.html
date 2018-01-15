@@ -1,0 +1,56 @@
+<div class="full reveal" id="menuModal" data-reveal data-v-offset="0">       
+  <div class="grid-y" style="height: 100vh;">
+    
+      <div class="overlay__menu__nav">
+        <div class="grid-x grid-padding-x grid-padding-y align-justify align-middle navigation">
+          
+          <div class="shrink cell navigation__inner">
+            <a data-close aria-label="Close modal">
+              <svg class="icon icon-close"><use xlink:href="/assets/icons/symbol-defs.svg#icon-close"></use></svg>
+            </a>
+            <svg class="icon icon-vice-logo show-for-medium"><use xlink:href="/assets/icons/symbol-defs.svg#icon-vice-logo"></use></svg>
+          </div>
+          
+          <div class="shrink cell navigation__inner">
+            <ul class="menu">
+              <li ><a href="" class="social-share facebook"><svg class="icon icon-socials icon-facebook"><use xlink:href="/assets/icons/symbol-defs.svg#icon-facebook"></use></svg></a></li>
+              <li><a href="" class="social-share twitter"><svg class="icon icon-socials icon-twitter"><use xlink:href="/assets/icons/symbol-defs.svg#icon-twitter"></use></svg></a></li>
+              <li><a href="mailto:?Subject=Class of 2018&amp;Body=Class%20of%202018 https://classof2018.vice.com"><svg class="icon icon-socials icon-envelope"><use xlink:href="/assets/icons/symbol-defs.svg#icon-envelope"></use></svg></a></li>
+            </ul>
+          </div>
+          
+        </div>
+      </div>
+
+    
+
+      <div class="overlay__menu__menu" style="height: 100%; width: 100%; position: absolute">
+        <div class="grid-y align-center" style="height: 100%;">
+          <div class="shrink cell">
+  
+            <ul class="vertical menu text-center classes">
+          		<li><a href="/"><h4 class="uppercase">Home</h4></a></li>
+          		{% set categories = craft.categories %}
+              {% for category in categories %}
+              <li><a href="{{ category.url }}"><h3 class="uppercase">{{ category.title }}</h3></a></li>
+              {% endfor %}
+            </ul>
+            
+            {% if globalSite.globalLocales %}
+            <ul class="menu align-center">
+              <li><a href="/"><h4>EN</h4></a></li>
+              <li><a href="/de/"><h4>DE</h4></a></li>
+              <li><a href="/es/"><h4>ES</h4></a></li>
+              <li><a href="/it/"><h4>IT</h4></a></li>
+              <li><a href="/nl/"><h4>NL</h4></a></li>
+            </ul>
+            {% endif %}
+          
+          </div>
+        </div>
+      </div>
+      
+
+
+  </div>
+</div>

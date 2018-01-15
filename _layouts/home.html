@@ -1,0 +1,13 @@
+---
+layout: default
+---
+
+<div class="grid-x grid-padding-x lightgallery">
+  <div class="small-12 cell" data-aos="fade-in">   
+    <ul class="vertical menu">
+    {% for image in page.images %}
+      <li class="grid-item simple" data-src="{{image.image}}"><a href="#">{{image.title}}, {{ image.date | date: site.date_format }}</a></li>
+    {% endfor %}
+    </ul>
+  </div>
+</div>
