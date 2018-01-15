@@ -13,7 +13,7 @@ collections:
     output: false
 url: https://www.six-by-four.com
 baseurl: 
-description: Study of shapes and features 
+description: Study of shapes and features
 permalink: pretty
 exclude:
 - bower.json
