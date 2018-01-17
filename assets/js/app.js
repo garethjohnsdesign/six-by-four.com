@@ -38,3 +38,19 @@ $('.lightgallery').lightGallery({
   download: false,
   mode: 'lg-fade'
 }); 
+
+// 3. Mailing List
+// --------------------
+
+$('#myForm').submit(function(e){
+    e.preventDefault();
+    $.ajax({
+        url:'https://hooks.zapier.com/hooks/catch/2879607/8lume3/',
+        type:'post',
+        data:$('#myForm').serialize(),
+        success:function(){
+          // Redirect to another success page
+          window.location = "http://google.com";
+        }
+    });
+});
